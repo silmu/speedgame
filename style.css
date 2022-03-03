@@ -42,7 +42,7 @@ h2 {
   top: 0;
   left: 0;
   z-index: 1;
-  display: none;
+  visibility: hidden;
 }
 
 .container-gameover-modal {
@@ -61,15 +61,25 @@ h2 {
 /* Circles */
 .container-circles {
   padding: 2rem;
+  min-width: 132px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .circles {
+  margin: 1rem;
   width: 100px;
   height: 100px;
   background-color: white;
   border: 1px solid black;
   border-radius: 50%;
-  display: inline-block;
+  padding: 2.5rem;
+  pointer-events: none; /* prevent clicking circles */
+}
+
+.circles.active {
+  background-color: violet;
 }
 
 /* Buttons */
@@ -87,4 +97,14 @@ h2 {
 
 .btns:hover {
   filter: hue-rotate(250deg);
+}
+
+#btn-stop {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+  }
 }
