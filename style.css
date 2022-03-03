@@ -19,8 +19,46 @@ body {
   text-align: center;
 }
 
-/* Circles */
+h2 {
+  font-size: 1rem;
+  font-weight: lighter;
+  padding: 1rem;
+  color: gray;
+}
 
+/* Header */
+.score {
+  font-weight: bold;
+}
+
+/* Modal Game Over */
+.container-gameover {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+.container-gameover-modal {
+  background-color: white;
+  height: 150px;
+  width: 300px;
+  margin: 15% auto;
+  border-radius: 10px;
+}
+
+.content-gameover {
+  display: inline-block;
+  line-height: 59px;
+}
+
+/* Circles */
 .container-circles {
   padding: 2rem;
 }
@@ -35,3 +73,18 @@ body {
 }
 
 /* Buttons */
+.btns {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(189, 90, 189);
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgb(207, 107, 207), violet);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.btns:hover {
+  filter: hue-rotate(250deg);
+}
