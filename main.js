@@ -38,13 +38,13 @@ let currentActive = 0;
 btnStart.addEventListener('click', () => {
   //start game
   console.log('Button Start is clicked');
-  gameStart();
+  startGame();
 });
 
 btnStop.addEventListener('click', () => {
   //make Game Over message appear on Stop button click
-  gameOverMsg.style.visibility = 'visible';
   console.log('Button Stop is clicked');
+  endGame();
 });
 
 btnClose.addEventListener('click', () => {
@@ -69,7 +69,7 @@ const circleOnClick = (i) => {
     rounds--;
     scoreText.textContent = score;
   }
-  console.log(`Circle ${i} is clicked`);
+  console.log(`Circle ${i + 1} is clicked`);
   //   active = i;
   //   circles[i].classList.toggle('active');
 };
@@ -84,7 +84,7 @@ const getRandom = (lastNumber) => {
 };
 
 //GAMEPLAY
-const gameStart = () => {
+const startGame = () => {
   console.log('Game started');
   //Make all circles clickable
   circles.forEach((circle) => (circle.style.pointerEvents = 'auto'));
@@ -102,10 +102,10 @@ const gameStart = () => {
 
   //Set newActive to be currentActive
   currentActive = newActive;
-  console.log('Circle number ' + currentActive + ' is selected');
+  console.log('Circle number ' + (currentActive + 1) + ' is selected');
 
   //
-  timer = setTimeout(() => gameStart(), pace);
+  timer = setTimeout(() => startGame(), pace);
   //Increasing pace of a game each round
   pace = pace - 10;
   rounds++;
