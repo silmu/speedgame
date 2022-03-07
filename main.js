@@ -28,12 +28,50 @@ const btnClose = document.querySelector('#btn-close');
 const gameOverMsg = document.querySelector('.container-gameover');
 const circles = document.querySelectorAll('.circles');
 const scoreText = document.querySelectorAll('.scoreText');
+const audio = document.querySelector('#btn-audio');
+const audioOn = document.querySelector('.fa-volume-high');
+const audioOff = document.querySelector('.fa-volume-xmark');
 
 let score = 0;
 let pace = 1000;
 let rounds = 0;
 let timer;
 let currentActive = 0;
+
+//Sound
+class Sound {
+  constructor(src) {
+    this.sound = document.createElement('audio');
+    this.sound.src = src;
+    this.sound.setAttribute('preload', 'auto');
+    this.sound.setAttribute('controls', 'none');
+    this.sound.style.display = 'none';
+    document.body.appendChild(this.sound);
+    this.play = function () {
+      this.sound.play();
+    };
+    this.stop = function () {
+      this.sound.pause();
+    };
+  }
+}
+
+const sound = new Sound('/frog.ogg');
+audioOn.style.display = 'block';
+audioOff.style.display = 'none';
+
+//Turn off audio on click
+audio.addEventListener('click', () => {
+  if (audioOn.style.display === 'none') {
+    console.log('Sound on');
+    audioOn.style.display = 'block';
+    audioOff.style.display = 'none';
+  } else {
+    console.log('Sound off');
+    audioOn.style.display = 'none';
+    audioOff.style.display = 'block';
+  }
+});
 
 btnStart.addEventListener('click', () => {
   //start game
@@ -96,6 +134,10 @@ const startGame = () => {
   //Pick a new circle that is not the same as the current one
   let newActive = getRandom(currentActive);
   circles[newActive].classList.toggle('active');
+  //If not muted play sound
+  if (audioOn.style.display === 'block') {
+    sound.play();
+  }
 
   //Make background of old active circle white
   circles[currentActive].classList.remove('active');
