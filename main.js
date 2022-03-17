@@ -20,7 +20,6 @@
 //advanced: player can enter their name and the end result will be saved in JSON format
 //top 10 scores are shown at the end of the game
 //game gets faster with each level or number of circles increases
-
 //Queries
 const btnStart = document.querySelector('#btn-start');
 const btnStop = document.querySelector('#btn-stop');
