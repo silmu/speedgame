@@ -55,7 +55,7 @@ class Sound {
   }
 }
 
-const sound = new Sound('/frog.ogg');
+const sound = new Sound('./frog.ogg');
 audioOn.style.display = 'block';
 audioOff.style.display = 'none';
 
