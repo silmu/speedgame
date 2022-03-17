@@ -156,8 +156,8 @@ const startGame = () => {
   }
   //Log score on a sceen and modale
   scoreText.forEach((text) => {
-    if (score >= 45) text.textContent = score + ' Amazing! 🥇';
-    if (score >= 30 && score < 45) text.textContent = score + ' Good gob! 🥈';
+    if (score > 44) text.textContent = score + ' Amazing! 🥇';
+    if (score > 29 && score < 45) text.textContent = score + ' Good gob! 🥈';
     if (score > 20 && score < 30) text.textContent = score + ' Nice! 🥉';
     else text.textContent = score;
   });
