@@ -98,7 +98,7 @@ h2 {
 
 /* Circles */
 .container-circles {
-  padding: 2rem;
+  padding: 0.5rem;
   min-width: 132px;
   display: flex;
   flex-wrap: wrap;
@@ -168,11 +168,4 @@ footer a {
   text-decoration: none;
   font-style: italic;
   font-size: small;
-}
-
-@media (max-width: 500) {
-  .container-circles {
-    padding: 0.5rem;
-    width: 100%;
-  }
 }
