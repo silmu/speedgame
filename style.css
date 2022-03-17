@@ -28,14 +28,20 @@ body {
 }
 
 h1 {
-  color: violet;
+  font-size: 2.5rem;
+  background: -webkit-linear-gradient(rgb(207, 107, 207), violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(189, 90, 189);
 }
 
 h2 {
   font-size: 1rem;
   font-weight: lighter;
   padding: 1rem;
-  color: gray;
+  color: maroon;
+  text-shadow: 0 0 8px white;
 }
 
 /* Header */
@@ -47,8 +53,13 @@ h2 {
 #btn-audio {
   background-color: transparent;
   border: none;
-  color: violet;
+  /* color: violet; */
   font-size: 2rem;
+  background: -webkit-linear-gradient(rgb(207, 107, 207), violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(189, 90, 189);
 }
 
 #btn-audio .fa-volume-xmark {
@@ -134,6 +145,7 @@ h2 {
   font-weight: bold;
   font-family: inherit;
   font-size: inherit;
+  box-shadow: 0 0 3px white;
 }
 
 .btns:hover {
@@ -151,7 +163,7 @@ footer .credits {
 }
 
 footer a {
-  color: gray;
+  color: rgb(138, 111, 111);
   font-weight: thin;
   text-decoration: none;
   font-style: italic;
