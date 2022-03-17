@@ -11,7 +11,7 @@ body {
     rgb(192, 255, 66),
     yellow
   ); */
-  background-image: url('./4264205.jpg');
+  background-image: url(./4264205.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
