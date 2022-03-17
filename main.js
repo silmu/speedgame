@@ -158,7 +158,7 @@ const startGame = () => {
   scoreText.forEach((text) => {
     if (score > 44) {
       text.textContent = score + ' Amazing! 🥇';
-    } else if (score > 39 && score < 45) {
+    } else if (score > 29 && score < 45) {
       text.textContent = score + ' Good gob! 🥈';
     } else if (score > 20 && score < 30) {
       text.textContent = score + ' Nice! 🥉';
