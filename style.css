@@ -89,20 +89,22 @@ h2 {
 }
 
 .circles {
+  background-image: url(lilypad.svg);
+  background-size: cover;
   margin: 1rem;
-  width: 100px;
-  height: 100px;
-  color: lightblue;
-  background-color: lightblue;
-  border: 1px solid lightblue;
+  width: 113px;
+  height: 105px;
+  color: transparent;
+  background-color: transparent;
+  /* border: 1px solid lightblue; */
   border-radius: 50%;
-  padding: 2.5rem;
+  /* padding: 2.5rem; */
   pointer-events: none; /* prevent clicking circles */
 }
 
 .circles.active {
   /* background-color: violet; */
-  background-image: url(frog.svg);
+  background-image: url(frog2.svg);
   filter: brightness(110%);
 }
 
