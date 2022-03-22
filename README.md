@@ -19,3 +19,4 @@ Live page [here](https://silmu.github.io/speedgame/)
 ## Authors and acknowledgment
 
 - GitHub @silmu
+- Water vector created by [pikisuperstar](www.freepik.com)
